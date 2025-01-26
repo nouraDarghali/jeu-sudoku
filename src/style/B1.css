@@ -1,0 +1,94 @@
+/* Conteneur principal du plateau de jeu */
+.board1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'effet flottant */
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Statut du jeu */
+.board1-status {
+  font-size: 2.5rem; /* Taille du texte pour le statut */
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Grille du plateau */
+.board1-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacement entre les cases */
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Styles des cases */
+.square {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border: 2px solid #007bff; /* Bordure bleue */
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px; /* Centrer verticalement */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 8px; /* Coins arrondis */
+}
+
+/* Effet hover sur les cases */
+.square:hover {
+  background-color: #e6f7ff; /* Couleur légère au survol */
+  transform: scale(1.1); /* Agrandissement léger */
+}
+
+/* Effet au clic sur les cases */
+.square:active {
+  transform: scale(1); /* Pas d'agrandissement au clic */
+}
+
+/* Plateau de jeu */
+.board-row > .square:not(:last-child) {
+  margin-right: -2px; /* Supprime l'écart entre les cases */
+}
+
+.board-row:not(:last-child) {
+  margin-bottom: -2px; /* Supprime l'écart entre les lignes */
+}
+
+/* Bouton de redémarrage */
+.board1-reset-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #007bff; /* Bleu principal du thème */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.board1-reset-button:hover {
+  background-color: #0056b3; /* Couleur plus foncée au survol */
+  transform: scale(1.05); /* Légère animation d'agrandissement */
+}
+
+.board1-reset-button:active {
+  transform: scale(1); /* Pas d'agrandissement au clic */
+}
+

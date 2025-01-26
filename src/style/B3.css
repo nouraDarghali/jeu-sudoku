@@ -1,0 +1,150 @@
+/* Conteneur principal du plateau de jeu */
+.board3-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'effet flottant */
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
+}
+/* Grille du plateau de Sudoku */
+.board3-sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 60px); /* 9 colonnes pour un Sudoku classique */
+  grid-gap: 10px; /* Espacement entre les cases */
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 420px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère autour du plateau */
+}
+
+/* Styles des cases */
+.board3-sudoku-cell {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 2px solid #007bff; /* Bordure bleue */
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px; /* Centrer verticalement */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 8px; /* Coins arrondis */
+}
+
+/* Effet hover sur les cases */
+.board3-sudoku-cell:hover {
+  background-color: #e6f7ff; /* Couleur légère au survol */
+  transform: scale(1.1); /* Agrandissement léger */
+}
+
+/* Effet au clic sur les cases */
+.board3-sudoku-cell:active {
+  transform: scale(1); /* Pas d'agrandissement au clic */
+}
+
+/* Styles des cases pré-remplies */
+.board3-prewitem {
+  background-color: #e6f7ff; /* Couleur de fond pour les cases pré-remplies */
+}
+
+/* Styles des cases incorrectes */
+.board3-incorrect {
+  background-color: #ffcccc; /* Fond rouge pour les entrées incorrectes */
+}
+
+/* Groupe de boutons */
+.board3-button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+/* Style générique des boutons */
+.board3-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 5px;
+  flex-grow: 1;
+}
+
+/* Bouton 'New' */
+.board3-btn-new {
+  background-color: #28a745; /* Vert pour New */
+  color: white;
+}
+
+.board3-btn-new:hover {
+  background-color: #218838; /* Couleur plus foncée au survol */
+  transform: scale(1.05); /* Légère animation d'agrandissement */
+}
+
+/* Bouton 'Clear' */
+.board3-btn-clear {
+  background-color: #ffc107; /* Jaune pour Clear */
+  color: black;
+}
+
+.board3-btn-clear:hover {
+  background-color: #e0a800; /* Couleur plus foncée au survol */
+  transform: scale(1.05); /* Légère animation d'agrandissement */
+}
+
+/* Bouton 'Solve' */
+.board3-btn-solve {
+  background-color: #007bff; /* Bleu pour Solve */
+  color: white;
+}
+
+.board3-btn-solve:hover {
+  background-color: #0056b3; /* Couleur plus foncée au survol */
+  transform: scale(1.05); /* Légère animation d'agrandissement */
+}
+
+/* Bouton 'Hint' */
+.board3-btn-hint {
+  background-color: #17a2b8; /* Cyan pour Hint */
+  color: white;
+}
+
+.board3-btn-hint:hover {
+  background-color: #117a8b; /* Couleur plus foncée au survol */
+  transform: scale(1.05); /* Légère animation d'agrandissement */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  /* Pour les petits écrans, ajuster la taille des cellules et du plateau */
+  .board3-sudoku-board {
+    grid-template-columns: repeat(9, 60px); /* Réduire la largeur des cases */
+    padding: 5px;
+  }
+
+  .board3-sudoku-cell {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    line-height: 55px;
+  }
+
+  .board3-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+  

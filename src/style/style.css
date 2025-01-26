@@ -1,0 +1,64 @@
+
+
+body{
+  background-color: #b8d2ee;
+}
+.home-page {
+  text-align: center;
+  padding: 20px;
+  background-color: #efececc7;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  margin-top: 150px;
+}
+
+/* Titre */
+.home-title {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Section des liens */
+.game-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Boutons avec images */
+.game-btn {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol des boutons */
+.game-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Images des liens */
+.game-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: #007bff solid 2px;
+  object-fit: cover;  /* Assure que l'image garde ses proportions */
+  transition: transform 0.3s ease;
+}
+
+/* Effet au survol des images */
+.game-image:hover {
+  transform: scale(1.1);
+}
+
+  
